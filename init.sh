@@ -14,8 +14,8 @@ API='/home/apiapp.git'
 sudo mkdir -p ${MOB}
 cd ${MOB}
 git init --bare
-cd ${'hooks/'}
-cat > post-receive << ENDOFFILE
+sudo cd ${'hooks/'}
+sudo cat > post-receive << ENDOFFILE
 #!/bin/sh
 git --work-tree=/var/www/mobapp --git-dir=/home/mobapp.git checkout -f
 ENDOFFILE
@@ -24,8 +24,8 @@ sudo chmod +x post-receive
 sudo mkdir -p ${WEB}
 cd ${WEB}
 git init --bare
-cd ${'hooks/'}
-cat > post-receive << ENDOFFILE
+sudo cd ${'hooks/'}
+sudo cat > post-receive << ENDOFFILE
 #!/bin/sh
 git --work-tree=/var/www/webapp --git-dir=/home/webapp.git checkout -f
 ENDOFFILE

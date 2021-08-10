@@ -19,7 +19,7 @@ sudo cat > hooks/post-receive << ENDOFFILE
 #!/bin/sh
 git --work-tree=/var/www/mobapp --git-dir=${MOB} checkout -f
 ENDOFFILE
-sudo chmod +x post-receive
+sudo chmod +x ${MOB}/hooks/post-receive
 
 sudo mkdir -p ${WEB}
 cd ${WEB}
@@ -29,7 +29,7 @@ sudo cat > hooks/post-receive << ENDOFFILE
 #!/bin/sh
 git --work-tree=/var/www/webapp --git-dir=${WEB} checkout -f
 ENDOFFILE
-sudo chmod +x post-receive
+sudo chmod +x /hooks/post-receive
 
 sudo mkdir -p ${API}
 cd ${API}
@@ -38,5 +38,5 @@ sudo cat > hooks/post-receive << ENDOFFILE
 #!/bin/sh
 git --work-tree=/var/www/apiapp --git-dir=${API} checkout -f
 ENDOFFILE
-sudo chmod +x post-receive
+sudo chmod +x /hooks/post-receive
 ENDOFFILE

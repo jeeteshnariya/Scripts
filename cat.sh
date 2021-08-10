@@ -1,3 +1,4 @@
+sudo cat > init.sh << ENDOFFILE
 #!/bin/bash
 sudo rm -rf /var/www/mobapp /var/www/webapp /var/www/apiapp /home/mobapp.git /home/webapp.git /home/apiapp.git
 echo "Creating Dir's"
@@ -38,15 +39,4 @@ sudo cat > hooks/post-receive << ENDOFFILE
 git --work-tree=/var/www/apiapp --git-dir=${API} checkout -f
 ENDOFFILE
 sudo chmod +x post-receive
-
-# sudo apt-get update
-# sudo apt-get install nginx
-# sudo apt-get install mysql-server
-# sudo mysql_secure_installation
-# sudo apt-get install php-fpm php-mysql php-mbstring
-# sudo nginx -t
-# sudo systemctl reload nginx
-
-
-
-
+ENDOFFILE

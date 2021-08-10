@@ -9,7 +9,7 @@ echo "Entered PHP version is - $version"
 echo "=================================="
 sudo apt-get update -y
 sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:ondrej/php
+sudo add-apt-repository ppa:ondrej/nginx
 sudo apt-get update
 sudo apt-get install -y php$version
 sudo apt install php$version-bcmath -y

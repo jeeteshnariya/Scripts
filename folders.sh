@@ -14,9 +14,9 @@ sudo mkdir -p /var/www/apiapp
 
 echo "Creating git init --bare"
 
-MOB='/home/mobapp'     
-WEB='/home/webapp'     
-API='/home/apiapp'     
+MOB='/home/mobapp.git'     
+WEB='/home/webapp.git'     
+API='/home/apiapp.git'     
 
 sudo mkdir -p /home/mobapp.git 
 cd ${MOB}
